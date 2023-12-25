@@ -1,3 +1,4 @@
+import {showToast, redirect} from './home.js';
 
 // Event listener for the 'DOMContentLoaded' event.
 // Invokes the 'showFevMovies' function when the document is fully loaded.
@@ -37,14 +38,6 @@ function showFevMovies(){
     }
 }
 
-
-// Redirects to the movie detail page based on the IMDb ID.
-function redirect(imdbID){
-    const url = `./moviedetail.html?imdbID=${imdbID}`;
-    window.open(url, '_blank');
-}
-
-
 // Removes a movie from the list of favorite movies stored in local storage.
 function removefromFev(currentmovie){
     let fevMovies = JSON.parse(localStorage.getItem('fevMovies'));
@@ -55,4 +48,6 @@ function removefromFev(currentmovie){
     let upadtedfevMovies = JSON.stringify(updatedFevMoviesArr);
     localStorage.setItem('fevMovies', upadtedfevMovies);
     showFevMovies();
+    showToast('Movie removed from favorite', 'red') //remove movie notification
 }
+

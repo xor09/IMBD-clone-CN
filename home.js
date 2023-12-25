@@ -59,7 +59,7 @@ function showMovies(movies){
 
 
 // Redirects to the movie detail page based on the IMDb ID.
-function redirect(imdbID){
+export function redirect(imdbID){
     const url = `./moviedetail.html?imdbID=${imdbID}`;
     window.open(url, '_blank');
 }
@@ -80,6 +80,28 @@ function addToFev(currentmovie){
 
     let upadtedfevMovies = JSON.stringify(fevMovies);
     localStorage.setItem('fevMovies', upadtedfevMovies);
+    showToast("Movie added to favorite", "green");
+}
+
+// show a toast as notification for adding / removing favorite movie(s)
+export function showToast(message, color) {
+    const toastContainer = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.style.backgroundColor = color;
+    toast.classList.add('toast');
+    toast.textContent = message;
+    toastContainer.appendChild(toast);
+
+    // Trigger a reflow to enable the transition
+    toast.offsetHeight;
+    toast.classList.add('show');
+    // Remove the toast after a certain time (e.g., 3 seconds)
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 300);
+    }, 3000);
 }
 
 
