@@ -23,17 +23,17 @@ This project is a clone of the popular movie database website, IMDB. It allows u
 ### Code Structure:
 
 - *HTML:*
-  - index.html: Home page layout.
-  - moviedetail.html: Movie detail page layout.
-  - favourite.html: Favorites page layout.
+  - `index.html`: Home page layout.
+  - `moviedetail.html`: Movie detail page layout.
+  - `favourite.html`: Favorites page layout.
 
 - *CSS:*
-  - style.css: Styles for the entire application, including responsiveness.
+  - `style.css`: Styles for the entire application, including responsiveness.
 
 - *JavaScript:*
-  - home.js: Handles search functionality, API calls, and general application logic for index.html page.
-  - moviedetail.js: Manages fetching and displaying details for a specific movie using its imdbID.
-  - favourite.js: Deals with displaying and managing favorite movies.
+  - `home.js`: Handles search functionality, API calls, and general application logic for index.html page.
+  - `moviedetail.js`: Manages fetching and displaying details for a specific movie using its imdbID.
+  - `favourite.js`: Deals with displaying and managing favorite movies.
 
 ### Code Quality:
 
@@ -68,7 +68,7 @@ This project is a clone of the popular movie database website, IMDB. It allows u
 
 ### Video Explanation:
 
-- A concise [video explanation](link_to_video) is available, demonstrating how the project was approached, the implemented features, and an overview of the final product.
+- A concise [video explanation](https://drive.google.com/file/d/1EEMvZcaz7pvo_7NY2p49X9glWYkN5yq1/view?usp=sharing) is available, demonstrating how the project was approached, the implemented features, and an overview of the final product.
 
 ### Conclusion:
 
